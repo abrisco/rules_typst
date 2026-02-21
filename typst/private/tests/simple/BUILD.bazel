@@ -1,5 +1,5 @@
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
-load("@rules_typst//typst:typst.bzl", "typst")
+load("//typst:typst.bzl", "typst")
 
 filegroup(
     name = "smile",
@@ -13,8 +13,8 @@ copy_file(
 )
 
 typst(
-    name = "example",
-    src = "example.typ",
+    name = "simple",
+    src = "simple.typ",
     data = [
         ":frown",
         ":smile",
