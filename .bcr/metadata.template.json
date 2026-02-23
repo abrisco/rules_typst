@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/matte1/rules_typst",
+    "maintainers": [
+        {
+            "email": "4590064+matte1-bot@users.noreply.github.com",
+            "github": "matte1",
+            "github_user_id": 4590064,
+            "name": "Matt Epperson"
+        }
+    ],
+    "repository": [
+        "github:matte1/rules_typst"
+    ],
+    "versions": [
+        "0.1.0"
+    ],
+    "yanked_versions": {}
+}

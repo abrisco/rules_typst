@@ -1,0 +1,6 @@
+# {version}
+
+## Setup
+```python
+bazel_dep(name = "rules_typst", version = "{version}")
+```
