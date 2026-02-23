@@ -1,3 +1,4 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
 load("//typst:typst.bzl", "typst")
 
@@ -18,5 +19,12 @@ typst(
     data = [
         ":frown",
         ":smile",
+    ],
+)
+
+build_test(
+    name = "build_test",
+    targets = [
+        ":simple",
     ],
 )
