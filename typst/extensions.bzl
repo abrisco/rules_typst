@@ -61,8 +61,8 @@ _VERSIONS = {
             "urls": ["https://github.com/typst/typst/releases/download/v0.14.2/typst-armv7-unknown-linux-musleabi.tar.xz"],
         },
         "riscv64gc-unknown-linux-gnu": {
-            "integrity": "sha256-RwqkmiKY0gtlwRmhDk/4gIVQRT4MtNhWJbicrwzt8Eg=",
-            "urls": ["https://github.com/typst/typst/releases/download/v0.14.2/typst-aarch64-apple-darwin.tar.xz"],
+            "integrity": "sha256-zd06/BS94OWWa/DlZaL4jItpu7mpEedHPU+ilJ5dvBU=",
+            "urls": ["https://github.com/typst/typst/releases/download/v0.14.2/typst-riscv64gc-unknown-linux-gnu.tar.xz"],
         },
         "x86_64-apple-darwin": {
             "integrity": "sha256-TpHY4eM6sWT5ScV2LgHuP6pYXIYVoqa9XjZ3+oUGskk=",

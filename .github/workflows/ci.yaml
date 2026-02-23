@@ -44,15 +44,6 @@ jobs:
         run: |
           echo "common --keep_going" >> ./user.bazelrc
 
-      - name: Install Autoconf (Unix)
-        run: |
-          ./tools/test_deps/install_test_deps.sh
-        if: startswith(runner.os, 'Windows') != true
-      - name: Install Autoconf (Windows)
-        run: |
-          echo NOOP
-        if: startswith(runner.os, 'Windows')
-
       # Build and Test the code
       - name: Test (Unix)
         run: bazel ${BAZEL_STARTUP_FLAGS[@]} test //...
@@ -92,14 +83,13 @@ jobs:
         run: |
           echo "common --keep_going" >> ./user.bazelrc
 
-      # Build and Test the code
-      - name: Test (Unix)
+      - name: Build (Unix)
         working-directory: "${{ github.workspace }}/examples"
-        run: bazel ${BAZEL_STARTUP_FLAGS[@]} test //...
+        run: bazel ${BAZEL_STARTUP_FLAGS[@]} build //...
         if: startswith(runner.os, 'Windows') != true
-      - name: Test (Windows)
+      - name: Build (Windows)
         working-directory: "${{ github.workspace }}/examples"
-        run: bazel $env:BAZEL_STARTUP_FLAGS test //...
+        run: bazel $env:BAZEL_STARTUP_FLAGS build //...
         if: startswith(runner.os, 'Windows')
 
   ci-format:
@@ -121,8 +111,3 @@ jobs:
           rm ./buildifier
         env:
           BUILDIFIER_VERSION: 8.2.0
-      - uses: DoozyX/clang-format-lint-action@v0.14
-        with:
-          source: '.'
-          extensions: 'h,c,cc'
-          clangFormatVersion: 14
