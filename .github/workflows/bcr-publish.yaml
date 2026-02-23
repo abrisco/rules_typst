@@ -31,7 +31,7 @@ jobs:
       attest: false
       tag_name: ${{ inputs.release_version }}
       author_name: matte1
-      author_email: 4590064+matte1-bot@users.noreply.github.com
+      author_email: 4590064+matte1@users.noreply.github.com
       # Tags don't include a "v" prefix
       tag_prefix: ""
       # GitHub repository which is a fork of the upstream where the Pull Request will be opened.
